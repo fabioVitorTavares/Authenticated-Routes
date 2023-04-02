@@ -8,7 +8,7 @@ import Context from "../Context/Context";
 export default function RoutesApp() {
   const { logged } = useContext(Context);
 
-  function Authentication({ children }) {
+  function Authentication({ children }: any) {
     if (logged) return children;
     return <Notfound/>;
   }

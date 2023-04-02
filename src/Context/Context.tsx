@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
-
-const Context = createContext({});
+import { ContextType } from "../Types/types";
+const Context = createContext<ContextType>({logged: false, setLogged: ()=>{}});
 
 export  function ContextProvider({children}: any) {
   const [logged, setLogged] = useState(false);
