@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-import RoutesApp from "./Routes";
+import { ContextProvider } from "./Context/Context";
+import RoutesApp from "./Routes/Routes";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <RoutesApp />
+    <ContextProvider>
+      <RoutesApp />
+    </ContextProvider>
   </React.StrictMode>
 );
